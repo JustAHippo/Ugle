@@ -12,14 +12,22 @@
                 transform: translateY(-30%);
                 display: block;
             }
+
         </style>
     </head>
     <body>
+
+    <script>
+        function searchThing() {
+            let query = document.getElementById("searchBox").value
+            location.href = "/search?q="+query
+        }
+    </script>
         <div id="mainContent" style="text-align: center; display: block; ">
             <img src="/img/ugle.png"  height="92">
             <p>The most fast and reliable search engine on the <a href="https://ucanet.net/">ucanet!</a></p>
             <input id="searchBox" type="text" style="width: 400px;">
-            <div><button style="width:150px;">Search!</button> <button style="width:150px; display: inline;">I'm Feeling Lucky!</button></div>
+            <div><button style="width:150px;" onclick="searchThing()">Search!</button> <button style="width:150px; display: inline;">I'm Feeling Lucky!</button></div>
 
             <p>Today's featured site: <a href="http://chat.oldavista.com">Oldavista Chat</a>!</p>
         </div>
