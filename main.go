@@ -10,6 +10,7 @@ func main() {
 	router := gin.Default()
 	router.TrustedPlatform = gin.PlatformCloudflare
 	router.GET("/api/v1/search", api.ApiSearch)
+	router.GET("/api/v1/updateCache", api.ApiCache)
 	router.Use(static.Serve("/", static.LocalFile("./static", false)))
 	router.Run("localhost:8080")
 }

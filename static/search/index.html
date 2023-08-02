@@ -1,21 +1,85 @@
 <html>
     <head>
+        <title>Ugle! - </title>
         <style>
             ul {
                 list-style-type: none;
                 margin: 0;
                 padding: 0;
             }
+            p {
+                font-size: 20px;
+            }
+
         </style>
     </head>
     <body>
-    <ul>
-        <li style="display: inline;"><a href="/"><img src="/img/ugle.png"></a></li>
-        <li style="display: inline;"><input type="text"></li>
-        <li style="display: inline;"><a href="contact.asp">Contact</a></li>
-        <li style="display: inline;"><a href="about.asp">About</a></li>
-    </ul>
+
+    <table cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+        <tr>
+            <td valign="top">
+                <a href="/">
+                    <img src="/img/ugle.png" alt="Ugle" border="0" height="78" data-atf="1" data-frt="0">
+                </a>
+            </td>
+            <td width="5">&nbsp;</td>
+            <td align="left">
+                <font face="verdana,arial,sans-serif">
+                    <br>
+                    <input id="searchBar" maxlength="50" name="q" size="31" type="text" value="google">
+                    <select name="num">
+                        <option selected="" value="10">10 results</option>
+                        <option value="30">30 results</option>
+                        <option value="100">100 results</option>
+                    </select>
+                    <nobr>&nbsp; <input name="sa" type="submit" value="Ugle Search" onclick="searchThing()">&nbsp; <input name="btnI" type="submit" value="I'm feeling lucky">
+                    </nobr>
+                </font>
+            </td>
+            <td align="right" valign="top">
+                <a href="/help.html">
+                    <font face="verdana,arial,sans-serif">Help</font>
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
     <hr size="1">
+    <center><font color="#6f6f6f" size="-1" style="font-size: medium;">Showing results <b id="resultsCount"></b> of approximately <b id="resultsCount2"></b> for <b id="searchTerm">google</b>. Search took <b>0.06</b> seconds.<br></font><br></center>
+    <div id="searchResults"></div>
+
+    <script>
+        function searchThing() {
+            let query = document.getElementById("searchBar").value
+            location.href = "/search?q="+query
+        }
+        async function getResults(queryParam) {
+            const response = await fetch("/api/v1/search?q=" + queryParam);
+            const results = await response.json();
+            return results;
+        }
+        const urlParams = new URLSearchParams(window.location.search);
+        const queryParam = urlParams.get('q');
+        document.getElementsByTagName("title").innerText = "Ugle! - " + queryParam
+        document.getElementById("searchBar").value = queryParam
+        getResults(queryParam).then ((results) => {
+            console.log(results)
+            document.getElementById("resultsCount").innerText = "1-" + results.Results.length;
+            document.getElementById("resultsCount2").innerText = results.Results.length;
+            document.getElementById('searchTerm').innerText = queryParam
+            for (let i = 0; i < results.Results.length; i++) {
+                let urlString = results.Results[i]
+                let urlArray = urlString.split(" ")
+                document.title = "Ugle! - " + queryParam
+                elem = document.createElement("p")
+                elem.innerHTML = "<a href=\" " + "http://"+ urlArray[0] + "\">" +urlArray[0] + "/</a><font size=\"-1\"><br><a href=\"\">" + urlArray[2]+ "</a></font>";
+                document.getElementById("searchResults").appendChild(elem);
+            }
+        });
+    </script>
+    <hr size="1">
+    <center><font size="-1">Copyright ©2023 Ugle Inc. -&nbsp;<a href="/about/">About</a> -&nbsp;<a href="">Help</a></font></center>
     </body>
 </html>
 

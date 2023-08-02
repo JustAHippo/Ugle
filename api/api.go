@@ -3,6 +3,8 @@ package api
 import (
 	"bufio"
 	"github.com/gin-gonic/gin"
+	"io"
+	"net/http"
 	"os"
 	"strings"
 )
@@ -46,4 +48,19 @@ func ApiSearch(ctx *gin.Context) {
 		return
 	}
 	ctx.JSON(200, SearchResponse{Results: queryResults})
+}
+
+func ApiCache(ctx *gin.Context) {
+	resp, err := http.Get("https://raw.githubusercontent.com/ucanet/ucanet-registry/main/ucanet-registry.txt")
+	if err != nil {
+		panic(err)
+		return
+	}
+	defer resp.Body.Close()
+	out, err := os.Create("./registry/registry.txt")
+	if err != nil {
+		// panic?
+	}
+	defer out.Close()
+	io.Copy(out, resp.Body)
 }
