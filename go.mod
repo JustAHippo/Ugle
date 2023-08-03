@@ -3,11 +3,13 @@ module Ugle
 go 1.20
 
 require (
+	github.com/PuerkitoBio/goquery v1.8.1
 	github.com/gin-contrib/static v0.0.1
 	github.com/gin-gonic/gin v1.9.1
 )
 
 require (
+	github.com/andybalholm/cascadia v1.3.1 // indirect
 	github.com/bytedance/sonic v1.9.1 // indirect
 	github.com/chenzhuoyu/base64x v0.0.0-20221115062448-fe3a3abad311 // indirect
 	github.com/gabriel-vasile/mimetype v1.4.2 // indirect

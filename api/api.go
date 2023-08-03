@@ -2,6 +2,7 @@ package api
 
 import (
 	"bufio"
+	"github.com/PuerkitoBio/goquery"
 	"github.com/gin-gonic/gin"
 	"io"
 	"net/http"
@@ -15,6 +16,7 @@ type SearchResponse struct {
 }
 
 func ApiSearch(ctx *gin.Context) {
+	debug := false
 	searchQuery := strings.ToLower(ctx.Query("q"))
 
 	if searchQuery == "" {
@@ -38,6 +40,19 @@ func ApiSearch(ctx *gin.Context) {
 	for scanner.Scan() {
 		if strings.Contains(scanner.Text(), searchQuery) && !strings.Contains(scanner.Text(), "0.0.0.0") {
 			queryResults = append(queryResults, scanner.Text())
+			if debug {
+				requestURL := "http://" + strings.Split(scanner.Text(), " ")[0]
+				response, _ := http.Get(requestURL)
+				if response.StatusCode == 200 {
+					document, _ := goquery.NewDocumentFromReader(response.Body)
+					title := document.Find("title").Text()
+					sitedesc, _ := document.Find("meta[name='description']").Attr("content")
+					println("Title", title)
+					println("Description", sitedesc)
+					println("Inserting Cache to Database (currently unimplemented)")
+				}
+			}
+
 		}
 
 		line++
