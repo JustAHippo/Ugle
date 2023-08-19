@@ -13,8 +13,9 @@ Before you contribute to Ugle!, check out [the ucanet GitHub page](https://githu
 - [x] Turn registry.txt into a database
 - [x] Cache site descriptions in database
 - [x] Make API with cached indexing
+- [x] Use new API in frontend
 ## What needs work
-- [ ] Use new API in frontend
+
 - [ ] Paginate results
 ## Building and Usage
 MongoDB is now required along with Go 1.20.
