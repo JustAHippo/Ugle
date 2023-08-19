@@ -10,17 +10,21 @@ Before you contribute to Ugle!, check out [the ucanet GitHub page](https://githu
 - [x] Basic old Google UI
 - [x] Domain name search
 - [x] Web scraping/crawling
+- [x] Turn registry.txt into a database
+- [x] Cache site descriptions in database
+- [x] Make API with cached indexing
 ## What needs work
-- [ ] Turn registry.txt into a database
-- [ ] Cache site descriptions in database
-- [ ] Use cached site descriptions in search engine
+- [ ] Use new API in frontend
 - [ ] Paginate results
 ## Building and Usage
-As of the current state, a simple
+MongoDB is now required along with Go 1.20.
+Edit [db.go](https://github.com/JustAHippo/Ugle/blob/main/db/db.go) to reflect your Mongo URI string
+
+Then run:
 ```console
 user@computer:~$ go build Ugle
 ```
-should be enough to build and run an instance of Ugle!. This is subject to change soon as MongoDB will likely become a requirement.
+And you're good to go!
 ## Contributing
 If you're interested in helping out with the project of Ugle! or the [ucanet](https://ucanet.net) as a whole, getting in involved with the community, or registering an ucanet domain, join the [Discord](https://discord.gg/3mjrESssB3) and try it out!
 

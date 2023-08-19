@@ -56,13 +56,14 @@ func CreateDatabaseFromRegistry() {
 				println(line)
 			}
 		}
-
+		descriptionClean := strings.ToValidUTF8(siteDescription, "")
+		titleClean := strings.ToValidUTF8(siteTitle, "")
 		dbEntry := db.Site{
 			Domain:      domainName,
 			IP:          ipAddress,
 			DiscordID:   strings.Split(scanner.Text(), " ")[1],
-			Title:       siteTitle,
-			Description: siteDescription,
+			Title:       titleClean,
+			Description: descriptionClean,
 		}
 		fullDatabase = append(fullDatabase, dbEntry)
 

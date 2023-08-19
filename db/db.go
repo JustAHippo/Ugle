@@ -6,7 +6,7 @@ import (
 	"golang.org/x/net/context"
 )
 
-const MongoUri = ""
+const MongoUri = "mongodb://localhost:27017"
 
 var Client *mongo.Client
 var DB *mongo.Database

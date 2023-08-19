@@ -1,9 +1,14 @@
 package api
 
 import (
+	"Ugle/db"
 	"bufio"
+	"context"
+	"fmt"
 	"github.com/PuerkitoBio/goquery"
 	"github.com/gin-gonic/gin"
+	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/mongo"
 	"io"
 	"net/http"
 	"os"
@@ -63,6 +68,33 @@ func ApiSearch(ctx *gin.Context) {
 		return
 	}
 	ctx.JSON(200, SearchResponse{Results: queryResults})
+}
+
+func MongoApiSearch(ctx *gin.Context) {
+	searchQuery := strings.ToLower(ctx.Query("q"))
+
+	if searchQuery == "" {
+		ctx.JSON(400, SearchResponse{ErrorMsg: "No query given!"})
+		return
+	} else if len(searchQuery) > 50 {
+		ctx.JSON(400, SearchResponse{ErrorMsg: "Query length longer than 50!"})
+		return
+	}
+	_ = mongo.IndexModel{Keys: bson.D{{"description", "text"}, {"domain", "text"}, {"title", "text"}}}
+	filter := bson.D{{"$text", bson.D{{"$search", fmt.Sprintf("\"%s\"", searchQuery)}}}}
+	println(searchQuery)
+	cursor, err := db.SiteDirectory.Find(context.TODO(), filter)
+	if err != nil {
+		panic(err)
+	}
+	var results []db.Site
+	if err = cursor.All(context.TODO(), &results); err != nil {
+		panic(err)
+	}
+	for _, result := range results {
+		//res, _ := json.Marshal(result)
+		ctx.JSON(200, result)
+	}
 }
 
 func ApiCache(ctx *gin.Context) {
