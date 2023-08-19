@@ -10,9 +10,9 @@ import (
 func main() {
 	router := gin.Default()
 	router.TrustedPlatform = gin.PlatformCloudflare
-	router.GET("/api/v1/search", api.ApiSearch)
+
 	router.GET("/api/v1/updateCache", api.ApiCache)
-	router.GET("/api/v1/experimentalSearch", api.MongoApiSearch)
+	router.GET("/api/v1/search", api.MongoApiSearch)
 	router.Use(static.Serve("/", static.LocalFile("./static", false)))
 	db.Init()
 

@@ -65,18 +65,31 @@
         document.getElementById("searchBar").value = queryParam
         getResults(queryParam).then ((results) => {
             console.log(results)
-            document.getElementById("resultsCount").innerText = "1-" + results.Results.length;
-            document.getElementById("resultsCount2").innerText = results.Results.length;
+            try {
+                document.getElementById("resultsCount").innerText = "1-" + results.length;
+                document.getElementById("resultsCount2").innerText = results.length;
+            } catch (err) {
+                document.getElementById("resultsCount").innerText = "0-0";
+                document.getElementById("resultsCount2").innerText = "0";
+            }
+
             document.getElementById('searchTerm').innerText = queryParam
-            for (let i = 0; i < results.Results.length; i++) {
-                let urlString = results.Results[i]
-                let urlArray = urlString.split(" ")
-                document.title = "Ugle! - " + queryParam
+            document.title = "Ugle! - " + queryParam
+            for (let i = 0; i < results.length; i++) {
+                let title = results[i].Title
+                let description = results[i].Description
+                let domain = results[i].Domain
+                let ip = results[i].IP
+                if (title == "") { title = domain}
+                if (description == "") { description = ip}
                 elem = document.createElement("p")
-                elem.innerHTML = "<a href=\" " + "http://"+ urlArray[0] + "\">" +urlArray[0] + "/</a><font size=\"-1\"><br><a href=\"\">" + urlArray[2]+ "</a></font>";
+                elem.innerHTML = "<a href=\" " + "http://"+ domain + "\">" + title + "/</a><font size=\"-1\"><br>" + description+ "</font></br><font color=\"#008000\" size=\"-1\">" + domain +" </font>";
                 document.getElementById("searchResults").appendChild(elem);
             }
+
         });
+
+
     </script>
     <hr size="1">
     <center><font size="-1">Copyright ©2023 Ugle Inc. -&nbsp;<a href="/about/">About</a> -&nbsp;<a href="">Help</a></font></center>
