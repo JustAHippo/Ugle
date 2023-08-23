@@ -33,7 +33,7 @@
                         <option value="30">30 results</option>
                         <option value="100">100 results</option>
                     </select>
-                    <nobr>&nbsp; <input name="sa" type="submit" value="Ugle Search" onclick="searchThing()">&nbsp; <input name="btnI" type="submit" value="I'm feeling lucky">
+                    <nobr>&nbsp; <input name="sa" type="submit" value="Ugle Search" onclick="searchThing();">&nbsp; <input name="btnI" type="submit" value="I'm feeling lucky">
                     </nobr>
                 </font>
             </td>
@@ -51,8 +51,8 @@
 
     <script>
         function searchThing() {
-            let query = document.getElementById("searchBar").value
-            location.href = "/search?q="+query
+            let query = document.getElementById("searchBar").value;
+            location.href = "/search?q="+query;
         }
         async function getResults(queryParam) {
             const response = await fetch("/api/v1/search?q=" + queryParam);
@@ -61,10 +61,10 @@
         }
         const urlParams = new URLSearchParams(window.location.search);
         const queryParam = urlParams.get('q');
-        document.getElementsByTagName("title").innerText = "Ugle! - " + queryParam
-        document.getElementById("searchBar").value = queryParam
+        document.getElementsByTagName("title").innerText = "Ugle! - " + queryParam;
+        document.getElementById("searchBar").value = queryParam;
         getResults(queryParam).then ((results) => {
-            console.log(results)
+            console.log(results);
             try {
                 document.getElementById("resultsCount").innerText = "1-" + results.length;
                 document.getElementById("resultsCount2").innerText = results.length;
@@ -73,16 +73,16 @@
                 document.getElementById("resultsCount2").innerText = "0";
             }
 
-            document.getElementById('searchTerm').innerText = queryParam
-            document.title = "Ugle! - " + queryParam
+            document.getElementById('searchTerm').innerText = queryParam;
+            document.title = "Ugle! - " + queryParam;
             for (let i = 0; i < results.length; i++) {
-                let title = results[i].Title
-                let description = results[i].Description
-                let domain = results[i].Domain
-                let ip = results[i].IP
-                if (title == "") { title = domain}
-                if (description == "") { description = ip}
-                elem = document.createElement("p")
+                let title = results[i].Title;
+                let description = results[i].Description;
+                let domain = results[i].Domain;
+                let ip = results[i].IP;
+                if (title == "") { title = domain;}
+                if (description == "") { description = ip;}
+                elem = document.createElement("p");
                 elem.innerHTML = "<a href=\" " + "http://"+ domain + "\">" + title + "/</a><font size=\"-1\"><br>" + description+ "</font></br><font color=\"#008000\" size=\"-1\">" + domain +" </font>";
                 document.getElementById("searchResults").appendChild(elem);
             }
