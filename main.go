@@ -38,5 +38,5 @@ func main() {
 	//utils.CreateDatabaseFromRegistry()
 	//WILL INDEX ALL SITES, ATTENTION!!!!! ^^^^^
 	
-	router.Run("192.168.86.30:8080")
+	router.Run("localhost:80")
 }
