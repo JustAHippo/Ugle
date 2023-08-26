@@ -14,6 +14,7 @@ Before you contribute to Ugle!, check out [the ucanet GitHub page](https://githu
 - [x] Cache site descriptions in database
 - [x] Make API with cached indexing
 - [x] Use new API in frontend
+- [x] Use serverside rendering! 
 ## What needs work
 
 - [ ] Paginate results
@@ -21,7 +22,10 @@ Before you contribute to Ugle!, check out [the ucanet GitHub page](https://githu
 MongoDB is now required along with Go 1.20.
 Edit [db.go](https://github.com/JustAHippo/Ugle/blob/main/db/db.go) to reflect your Mongo URI string
 
-Then run:
+Uncomment line 6 and 38 before building for the first time in [main.go](https://github.com/JustAHippo/Ugle/blob/main/main.go), then uncomment after first use
+
+After first run, recomment and build once again by running:
+
 ```console
 user@computer:~$ go build Ugle
 ```
