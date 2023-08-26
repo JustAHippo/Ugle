@@ -1,36 +1,37 @@
-
 <html>
     <head>
         <title>Ugle! - Your Ucanet Search Engine!</title>
-        <style>
-
-            #mainContent {
-                margin: 0;
-                position: relative;
-                top: 30%;
-                -ms-transform: translateY(-30%);
-                transform: translateY(-30%);
-                display: block;
-            }
-
-        </style>
     </head>
-    <body>
-
-    <script>
-        function searchThing() {
-            let query = document.getElementById("searchBox").value;
-            location.href = "/search?q="+query;
-        }
-    </script>
-        <div id="mainContent" style="text-align: center; display: block; ">
-            <img src="/img/ugle.png"  height="92">
-            <p>The most fast and reliable search engine on the <a href="https://ucanet.net/">ucanet!</a></p>
-            <p>Made by Drowzee</p>
-            <input id="searchBox" type="text" style="width: 400px;">
-            <div><button style="width:150px;" onclick="searchThing();">Search!</button> <button style="width:150px; display: inline;">I'm Feeling Lucky!</button></div>
-
-            <p>Today's featured site: <a href="http://chat.oldavista.com">Oldavista Chat</a>!</p>
-        </div>
+    <body bgcolor="#FFFFFF">
+    	<center>
+    	<br>
+        <img src="/img/ugle.png" height="92px" alt="Ugle! - Your Ucanet Search Engine!">
+        <table border="0">
+        	<tbody>
+		    	<tr>
+		    		<td>
+		    			<form name="f" method="GET" action="/search">
+		    				<center>
+		    					<br>
+								The fastest and most reliable search engine on the <a href="https://ucanet.net/">ucanet!</a><br>
+								<br>
+								Made by Drowzee<br>
+		    				</center>
+		    				<center>
+		    					<input type="text" name="q" value="" size="40" framewidth="4">
+		    				</center>
+		    				<center>
+		    					<input type="submit" value="Search with Ugle!">
+		    					 
+		    					<input type="submit" name="lucky" value="I'm Feeling Lucky!">
+		    				</center>
+		    			</form>
+		    			<script>document.f.q.focus()</script>
+		    		</td>
+		    	</tr>
+     		</tbody>
+        </table>
+        <p>Today's featured site: <a href="http://chat.oldavista.com">Oldavista Chat</a>!</p>
+		</center>
     </body>
 </html>
