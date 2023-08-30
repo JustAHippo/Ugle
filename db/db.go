@@ -28,4 +28,6 @@ type Site struct {
 	DiscordID   string `json:discordID`
 	Title       string `json:title`
 	Description string `json:description`
+	SpecifiedDescription string `json:specifiedDescription`
+	SpecifiedTags string `json:specifiedTags`
 }

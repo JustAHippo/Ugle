@@ -68,7 +68,7 @@ func MongoApiSearch(ctx *gin.Context) {
 		searchResults = "Query length longer than 50!"
 	} else {
 		idxopts := options.CreateIndexes().SetMaxTime(10 * time.Second)
-		db.SiteDirectory.Indexes().CreateOne(context.TODO(), mongo.IndexModel{Keys: bson.D{{"description", "text"}, {"domain", "text"}, {"title", "text"}}}, idxopts)
+		db.SiteDirectory.Indexes().CreateOne(context.TODO(), mongo.IndexModel{Keys: bson.D{{"description", "text"}, {"domain", "text"}, {"title", "text"}, {"specifieddescription", "text"}, {"specifiedtags", "text"}}}, idxopts)
 		filter := bson.D{{"$text", bson.D{{"$search", fmt.Sprintf("\"%s\"", searchQuery)}}}}
 
 		cursor, err := db.SiteDirectory.Find(context.TODO(), filter)
