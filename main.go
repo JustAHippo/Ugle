@@ -11,14 +11,14 @@ import (
 	"net/http"
 )
 
-func ApiCache() {
-	resp, err := http.Get("https://raw.githubusercontent.com/ucanet/ucanet-registry/main/ucanet-registry.txt")
+func ApiCache(url string, file string) {
+	resp, err := http.Get(url)
 	if err != nil {
 		panic(err)
 		return
 	}
 	defer resp.Body.Close()
-	out, err := os.Create("./registry/registry.txt")
+	out, err := os.Create(file)
 	if err != nil {
 		// panic?
 	}
@@ -27,16 +27,16 @@ func ApiCache() {
 }
 
 func main() {
-	router := gin.Default()
-	router.TrustedPlatform = gin.PlatformCloudflare
-
-	router.GET("/search", api.MongoApiSearch)
-	router.Use(static.Serve("/", static.LocalFile("./static", false)))
-	
-	ApiCache()
+	ApiCache("https://raw.githubusercontent.com/ucanet/ucanet-registry/main/ucanet-registry.txt", "./registry/registry.txt")
+	ApiCache("http://ucanet.net/sitelist.txt", "./registry/sitelist.txt")
 	db.Init()
+	
 	//utils.CreateDatabaseFromRegistry()
 	//WILL INDEX ALL SITES, ATTENTION!!!!! ^^^^^
 	
-	router.Run("localhost:80")
+	router := gin.Default()
+	router.TrustedPlatform = gin.PlatformCloudflare
+	router.GET("/search", api.MongoApiSearch)
+	router.Use(static.Serve("/", static.LocalFile("./static", false)))
+	router.Run("127.0.0.1:80")
 }

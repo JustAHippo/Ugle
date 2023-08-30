@@ -1,0 +1,144 @@
+! software-and-computing Software_&_Computing
+# Internet a
+# Software/Applications b
+# PC/Electronics c
+# Misc d
+! games-art-media Video_Games,_Art,_&_Media
+# Video_Games/Flash/Fun e
+# Art f
+# Books/Literature/Comics y
+# Media h
+# Misc i
+! chatting-and-social Chatting_&_Social
+# Chat_Rooms j
+# IRC k
+# Social l
+# Forums m
+# Misc n
+! info-resources Information_&_Resources
+# News x
+# Download_Sites o
+# Resources p
+# Wikis q
+# Help r
+# Misc s
+! personal-pages Personal_Pages
+# Personal_Sites/Blogs t
+# Cities u
+# Community v
+# Misc w
+- - -
+www.ucanet.net a An alternate-root DNS server for vintage and retro computers!
+www.theoldnet.com a Welcome To The Old Internet Again!
+www.oldavista.com a Search on Old'aVista.
+www.retronetwork.net a A directory of services for old computers
+www.buttercuprecipes.com pt Buttercup's Blog (recipes and more!)
+www.geckof.net t GeckoF's igloo (also www.gecko.fish)
+www.ericexperiment.com t The Eric Experiment
+www.web6k.net w Website 6000
+chat.oldavista.com j Old'aVista Chat Room
+macintosh.garden beo Macintosh abandonware archive consisting of applications, games, books and much, much more.
+system7today.com b System 7 software, advice, and information.
+www.cornica.org h Video Entertainment for Quicktime users.
+www.nyetscape.net t Nyetscape Personal Site
+www.alexsmine.cc w Alexsmine
+www.lynx.re ap Link shortening service for your vintage PC
+www.pecetfull.pl t PeCeT_full's Personal Site
+www.apple.com c Apple Computer [Protoweb]
+www.microsoft.com c Microsoft Corporation [Protoweb]
+www.aol.com a AOL Anywhere [Protoweb]
+www.weather.com p The Weather Channel - live weather and forecasts [Protoweb]
+www.runescape.com e Runescape [Protoweb]
+www.shoutcast.com h SHOUTcast.com Live Internet Radio! [Protoweb]
+www.newgrounds.com e The Problems of the Future, Today! [Protoweb]
+www.ezone.com e Ezone! The place to play fun, free on-line games! [Protoweb]
+www.homestarrunner.com e Everybody! Everybody! - Homestar Runner website. [Protoweb]
+www.popcap.com e PopCap Games [Protoweb]
+www.geocities.com u Your Home On The Web [Protoweb]
+www.sega.com e Welcome to Sega Online [Protoweb]
+www.webring.org u The Shape of Things to Come [Protoweb]
+www.bonzi.com b BONZI.COM Software [Protoweb]
+www.capcom.com e Capcom [Protoweb]
+www.3dfx.com e 3Dfx Interactive [Protoweb]
+www.alexa.com p ALEXA Internet [Protoweb]
+www.anarchyent.com e Anarchy Entertainment's Home Page [Protoweb]
+www.ast.com c AST Computer [Protoweb]
+www.bombadil.com e Tom Bombadil's Software Emporium [Protoweb]
+www.compaq.com c Welcome to Compaq Access [Protoweb]
+www.e4me.com c eMachines, Inc [Protoweb]
+www.glock.com p Glock Corporation Website [Protoweb]
+www.gtinteractive.com e GT Interactive Software [Protoweb]
+www.hampsterdance.com e The Hampster Dance - dance the night away [Protoweb]
+www.humongous.com e Humongous Entertainment [Protoweb]
+www.ibm.com c IBM Corporation [Protoweb]
+www.pc.ibm.com c IBM Personal Computing Home Page [Protoweb]
+www.iridium.com a Iridium LLC [Protoweb]
+www.macromedia.com b Welcome to Macromedia [Protoweb]
+www.pinballwizards.com e Pinball Wizards [Protoweb]
+www.psygnosis.com e Psygnosis Online [Protoweb]
+www.ravensoft.com e RAVEN SOFTWARE [Protoweb]
+www.stanford.edu p Stanford University Homepage [Protoweb]
+www.sun.com c Sun Microsystems [Protoweb]
+www.tombraider.com e Tomb Raider Home Page [Protoweb]
+hoohoo.ncsa.uiuc.edu s The NCSA HTTPd Home Page [Protoweb]
+www.umich.edu p University of Michigan [Protoweb]
+www.webtv.net c WebTV Networks, Inc. [Protoweb]
+www.winzip.com b WinZip Home Page [Protoweb]
+www.aa.gov.au p Australian Archives [Protoweb]
+www.toxiccustard.com t Toxic Custard Workshop Files [Protoweb]
+www.grokksoft.com e GrokkSoft home page - Home of HoverRace [Protoweb]
+www.city.fi s CITY-LEHTI [Protoweb]
+mercurio.iet.unipi.it p The European Railway Server [Protoweb]
+www.sega.co.jp e Sega Entertainment Universe [Protoweb]
+info.cern.ch s The World Wide Web project - World's First Web Site in 1990! [Protoweb]
+forum.16colo.rs m 16colo.rs ANSI/ASCII art archive
+69420.net f WELCOME TO BEST (WORST) WEBSITE
+dantdmjace.org t DanTDMJace's Awesome 1990's Website!
+cyber.navy m BBS using regular internet!
+defragged.com w defragged.com
+www.sonicmegablast.net w Working on a Way Past Cool Website
+www.yayazizi.com t yayazizi's site
+www.nmac101.net t nmac101's website
+www.dictionary.com p Dictionary.com - definitions provided by the Merriam-Webster API [Protoweb]
+netcafe.ncmuseum.org.au s National Communications Museum [Protoweb]
+68k.news x Headlines from the Future
+dreampipe.net e Dreampipe: The Ultimate Dreamcast Browser Portal
+www.eternal-september.org x Provides free access to text-only Usenet Newsu
+frogfind.com a The Search Engine for Vintage Computers
+halo.bungie.org e Halo & &Bungie Studio fansite [Protoweb]
+www.mirsoft.info eh World of Game Music
+techfrog88.com t TechFrog88
+www.pracdev.org hp Channel 99: NSV video streams compatible with Winamp v3
+razorback95.com m Razorback95
+retrosite.org w Welcome to RetroSite. Where would you like to go?
+webtv.zone hc WebTV Redialed
+www.windowsupdaterestored.com bop Windows Update Restored
+halo.ancrik.com e Halo Central [Protoweb]
+www.cheatcodes.com ep CheatCodes.com - Cheats and Game Guides for Consoles, Handhelds & PC [Protoweb]
+www.frys.com c Fry's Electronics Home Page [Protoweb]
+aerie.geofront.com f Mehve's Aerie [Protoweb]
+www.homedepot.com s We Can Make Decorating Almost Foolproof! [Protoweb]
+m-ms.com e "M&M's" Studios [Protoweb]
+hyperarchive.lcs.mit.edu p INFO-MAC HyperArchive [Protoweb]
+www.pixar.com h Pixar Animation Studios [Protoweb]
+www.runningwithscissors.com e Running With Scissors - Postal Plus [Protoweb]
+www.soundjam.com b SoundJam MP THE MP3 Player and Encoder for Macintosh Computers [Protoweb]
+www.spacejam.com eh Space Jam [Protoweb]
+www.sysinternals.com bp System Internals, advanced system utilities and technical information [Protoweb]
+www.valvesoftware.com e valve [Protoweb]
+i430vx.net tp A resource for older computers.
+ultimatenetwork.my.to ept UltimateNetwork is a portal to access servers using a Web Browser.
+bitview.net h BitView is the best place to share your videos with the world and your friends and family.
+blips.club l Blips is a service for friends, family, and co–workers to communicate and stay connected through the exchange of quick, frequent answers to one simple question: What are you doing?
+jrz.pw t jrz's personal site
+abacasonline.com f Abacas is the avatar of Maura's online presence.
+sito.org f SITO is a site for cooperative, collaborative, and individual art.
+0xbabaf000l.net yp 0xBABAF000L webcomic archive
+robotjones.net h The Robot Jones Central
+trsrockin.com e ...WE'VE GOT GAME
+lbmixpro.com ap Verdant L.B. Mixed Productions: Orange's Retro Links Page
+sudolinux.org t sudo's hellish place
+thevintagepc.com btu The Timeless User
+worker.com wi You are on the s-WN version of the site (aka workerNet)
+ittheh.com wi You are on the s-IN version of the site (aka itthehNet)
+ugle.com ap Your Ucanet Search Engine!
