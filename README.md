@@ -22,7 +22,7 @@ Before you contribute to Ugle!, check out [the ucanet GitHub page](https://githu
 MongoDB is now required along with Go 1.20.
 Edit [db.go](https://github.com/JustAHippo/Ugle/blob/main/db/db.go) to reflect your Mongo URI string
 
-Uncomment line 6 and 34 before building for the first time in [main.go](https://github.com/JustAHippo/Ugle/blob/main/main.go), then recomment after first use
+Uncomment line 6 and 38 before building for the first time in [main.go](https://github.com/JustAHippo/Ugle/blob/main/main.go), then uncomment after first use
 
 After first run, recomment and build once again by running:
 
